@@ -11,7 +11,7 @@ public class Lab2P2_WilmerZuniga {
         Object[] Datos = {"admin", "admin1234"};
 
         ArrayList<Object> Empleadoss = new ArrayList();
-        ArrayList<Object> Clientes = new ArrayList();
+        ArrayList<Object> Clientess = new ArrayList();
         ArrayList<Object> VRAAAAM = new ArrayList();
 
         System.out.println("---------------------------------");
@@ -136,6 +136,97 @@ public class Lab2P2_WilmerZuniga {
 
                     case 2: {
                         System.out.println("");
+                        boolean Clientesss = true;
+                        while (Clientesss == true) {
+                            System.out.println("-------------------Clientes-------------------");
+                            System.out.println("1 - Crear Clientes");
+                            System.out.println("2 - Modificar Cliente");
+                            System.out.println("3 - Listar Clientes");                            System.out.println("3 - Listar Clientes");
+                            System.out.println("3 - Listar carros por Cliente");
+                            System.out.println("4 - Eliminar Cliente");
+                            System.out.println("5 - Salir de el submenu");
+                            System.out.println("----------------------------------------------");
+                            System.out.println("Ingrese la opcion que desea: ");
+                            lea = new Scanner(System.in);
+                            int opciempl = lea.nextInt();
+                            System.out.println("");
+
+                            switch (opciempl) {
+                                case 1: {
+                                    System.out.println("Ingrese el nombre de el cliente: ");
+                                    lea = new Scanner(System.in);
+                                    String nombre = lea.nextLine();
+                                    System.out.println("");
+
+                                    System.out.println("Ingrese la edad de el cliente: ");
+                                    lea = new Scanner(System.in);
+                                    int edad = lea.nextInt();
+                                    System.out.println("");
+
+                                    System.out.println("Ingrese el sueldo de el cliente: ");
+                                    lea = new Scanner(System.in);
+                                    int Saldo = lea.nextInt();
+                                    System.out.println("");
+
+                                    System.out.println("Ingrese el numero de identidad de el cliente: ");
+                                    lea = new Scanner(System.in);
+                                    String ID = lea.nextLine();
+                                    System.out.println("");
+
+
+                                    Clientess.add(new Clientes(nombre, edad, Saldo, ID));
+
+                                }
+                                break;
+
+                                case 2: {
+                                    boolean chamba = false;
+                                    System.out.println("Ingrese el indice de el cliente: ");
+                                    int ind = lea.nextInt();
+                                    System.out.println("");
+                                    System.out.println("Ingrese 0 para iniciar su turno y 1 para terminarlo: ");
+                                    lea = new Scanner(System.in);
+                                    int opci = lea.nextInt();
+                                    //((sdfsdf) Empleadoss.get(ind)).Chambeando(opci);
+
+                                }
+                                break;
+
+                                case 3: {
+                                    for (Object Clientes : Clientess) {
+                                        System.out.println("");
+                                        System.out.println("Cliente " + (Clientess.indexOf(Clientes)));
+                                        System.out.println(Clientes);
+                                        System.out.println("");
+                                    }
+
+                                }
+                                break;
+
+                                case 4: {
+                                    System.out.println("Posicion de el cliente: ");
+                                    int eli = lea.nextInt();
+                                    System.out.println("");
+
+                                    if (eli <= Empleadoss.size()) {
+                                        Clientess.remove(eli);
+                                    }
+
+                                    System.out.println("El cliente fue eliminado exitosamente");
+                                }
+                                break;
+
+                                case 5: {
+                                    Clientesss = false;
+                                }
+                                break;
+
+                                default: {
+                                    System.out.println("Ingrese una opcion valida");
+                                }
+                            }
+                        }
+
                     }
                     break;
 
