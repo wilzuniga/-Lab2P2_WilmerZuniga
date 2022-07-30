@@ -3,7 +3,7 @@ package lab2p2_wilmerzuniga;
 public class Clientes {
     private int Edad;
     private String Nombre;
-    private int Saldo;
+    private double Saldo;
     private String ID;
     
     //Constructores
@@ -11,7 +11,7 @@ public class Clientes {
 
     }
 
-    public Clientes(String Nombre, int Edad, int Saldo, String ID) {
+    public Clientes(String Nombre, int Edad, double Saldo, String ID) {
         this.Edad = Edad;
         this.Nombre = Nombre;
         this.Saldo = Saldo;
@@ -36,11 +36,11 @@ public class Clientes {
     }
 
 
-    public void setSaldo(int Saldo) {
+    public void setSaldo(double Saldo) {
         this.Saldo = Saldo;
     }
 
-    public int getSaldo() {
+    public double getSaldo() {
         return Saldo;
     }
 
